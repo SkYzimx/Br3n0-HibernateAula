@@ -31,7 +31,7 @@ public class Viatura {
     @Column(name="via_combustivel", length = 45,  nullable = false)
     private String combustivel;
     @Column(name="via_km", nullable = false)
-    private String nomeGuerra;
+    private Integer km;
 
     public Viatura() {
     }
@@ -52,8 +52,8 @@ public class Viatura {
         this.combustivel = combustivel;
     }
 
-    public void setNomeGuerra(String nomeGuerra) {
-        this.nomeGuerra = nomeGuerra;
+    public void setKm(Integer km) {
+        this.km = km;
     }
 
     public Integer getId() {
@@ -72,29 +72,32 @@ public class Viatura {
         return combustivel;
     }
 
-    public String getNomeGuerra() {
-        return nomeGuerra;
+    public Integer getKm() {
+        return km;
     }
+
+
     
-//    @Override
-//    public boolean equals(Object obj) {
-//        if (obj instanceof Bombeiro) {
-//            Bombeiro aux = (Bombeiro) obj;
-//
-//            if (!(aux.getId().equals(this.id)) || !(aux.getCpf().equals(this.cpf))) {
-//                return false;
-//            } else {
-//                return true;
-//            }
-//
-//        } else {
-//            return false;
-//        }
-//    }
-//    @Override
-//    public int hashCode() {
-//        return getClass().hashCode();
-//    } 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Viatura) {
+            Viatura aux = (Viatura) obj;
+
+            if (!(aux.getId().equals(this.id)) || !(aux.getPlaca().equals(this.placa))) {
+                return false;
+            } else {
+                return true;
+            }
+
+        } else {
+            return false;
+        }
+    }
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
+    } 
+
+    
 
 }
-
