@@ -23,5 +23,6 @@
         <mapping class= "ifc.ibirama.br3n0.mpbb0128.hibernate.entidadades.Bombeiro"/>
         <mapping class= "ifc.ibirama.br3n0.mpbb0128.hibernate.entidadades.Viatura"/>
         <mapping class= "ifc.ibirama.br3n0.mpbb0128.hibernate.entidadades.Patente"/>
+        <mapping class= "ifc.ibirama.br3n0.mpbb0128.hibernate.entidadades.StatusBombeiro"/>
     </session-factory>
 </hibernate-configuration>
