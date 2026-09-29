@@ -21,7 +21,7 @@ import java.time.LocalDate;
 public class Patente {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "pat_id", unique = true)
     private Integer id;
     @Column(name = "pat_sigla", length = 45, unique = true, nullable = false)
