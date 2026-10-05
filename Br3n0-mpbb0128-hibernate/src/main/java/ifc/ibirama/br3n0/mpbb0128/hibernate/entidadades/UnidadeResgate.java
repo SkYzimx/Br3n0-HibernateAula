@@ -23,7 +23,7 @@ public class UnidadeResgate {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "unr_id", unique = true)
     private Integer id;
-    @Column(name = "unr_capacidade", length = 45, nullable = false)
+    @Column(name = "unr_capacidade", nullable = false)
     private Integer capacidade;
 
     public UnidadeResgate() {
