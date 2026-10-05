@@ -24,5 +24,11 @@
         <mapping class= "ifc.ibirama.br3n0.mpbb0128.hibernate.entidadades.Viatura"/>
         <mapping class= "ifc.ibirama.br3n0.mpbb0128.hibernate.entidadades.Patente"/>
         <mapping class= "ifc.ibirama.br3n0.mpbb0128.hibernate.entidadades.StatusBombeiro"/>
+        <mapping class= "ifc.ibirama.br3n0.mpbb0128.hibernate.entidadades.StatusViatura"/>
+        <mapping class= "ifc.ibirama.br3n0.mpbb0128.hibernate.entidadades.TelefoneContato"/>
+        <mapping class= "ifc.ibirama.br3n0.mpbb0128.hibernate.entidadades.Especialidade"/>
+        <mapping class= "ifc.ibirama.br3n0.mpbb0128.hibernate.entidadades.AutoTanque"/>
+        <mapping class= "ifc.ibirama.br3n0.mpbb0128.hibernate.entidadades.AutoEscada"/>
+        <mapping class= "ifc.ibirama.br3n0.mpbb0128.hibernate.entidadades.UnidadeResgate"/>
     </session-factory>
 </hibernate-configuration>
