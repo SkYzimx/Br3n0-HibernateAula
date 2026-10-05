@@ -20,11 +20,11 @@ import jakarta.persistence.Table;
 public class StatusViatura {
       @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "stb_id", unique = true)
+    @Column(name = "stv_id", unique = true)
     private Integer id;
-    @Column(name = "stb_sigla", length = 45, unique = true, nullable = false)
+    @Column(name = "stv_sigla", length = 45, unique = true, nullable = false)
     private String sigla;
-    @Column(name = "stb_descricao", length = 45, nullable = false)
+    @Column(name = "stv_descricao", length = 45, nullable = false)
     private String descricao;
 
     public StatusViatura() {
