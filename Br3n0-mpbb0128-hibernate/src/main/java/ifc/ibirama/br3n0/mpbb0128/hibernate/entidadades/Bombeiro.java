@@ -18,6 +18,9 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name="Bombeiro")
 public class Bombeiro {
+    
+    private Usuario usuario;
+    
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="bom_id", unique= true)
