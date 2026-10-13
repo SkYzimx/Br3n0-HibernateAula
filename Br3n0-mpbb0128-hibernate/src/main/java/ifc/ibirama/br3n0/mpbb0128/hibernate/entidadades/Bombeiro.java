@@ -34,7 +34,8 @@ public class Bombeiro {
     @Column(name="bom_nome_guerra", length = 45, unique = true,  nullable = false)
     private String nomeGuerra;
 
-    public Bombeiro() {
+    public Bombeiro(Usuario usuario) {
+        this.usuario = usuario;
     }
 
     public Integer getId() {

@@ -29,6 +29,11 @@ public class Usuario {
     @Column(name = "usu_senha", length = 45, unique = true, nullable = false)
     private String senha;
 
+    public Usuario(Bombeiro bombeiro) {
+        this.bombeiro = bombeiro;
+    }
+
+    
     public Bombeiro getBombeiro() {
         return bombeiro;
     }
@@ -76,7 +81,7 @@ public class Usuario {
             return false;
         }
     }
-
+    
     @Override
     public int hashCode() {
         return getClass().hashCode();
