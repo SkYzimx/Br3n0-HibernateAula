@@ -20,9 +20,7 @@ import jakarta.persistence.Table;
 @Table(name="Usuario")
 public class Usuario {
     
-    @OneToOne
-    @JoinColumn(name="bom_id", unique= true)
-    private Bombeiro bombeiro;
+
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -32,7 +30,11 @@ public class Usuario {
     private String login;
     @Column(name = "usu_senha", length = 45, unique = true, nullable = false)
     private String senha;
-
+    
+    @OneToOne
+    @JoinColumn(name="bom_id", unique= true)
+    private Bombeiro bombeiro;
+    
     public Usuario(Bombeiro bombeiro) {
         this.bombeiro = bombeiro;
     }

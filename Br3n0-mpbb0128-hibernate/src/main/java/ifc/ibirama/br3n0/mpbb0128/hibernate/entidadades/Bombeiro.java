@@ -13,15 +13,19 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name="Bombeiro")
 public class Bombeiro {
     
-    @OneToOne(mappedBy = "bombeiro")
-    private Usuario usuario;
     
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -35,7 +39,14 @@ public class Bombeiro {
     private String nome;
     @Column(name="bom_nome_guerra", length = 45, unique = true,  nullable = false)
     private String nomeGuerra;
-
+    @OneToOne(mappedBy = "bombeiro")
+    private Usuario usuario;
+    @OneToMany(mappedBy = "bombeiro")
+    private Set<TelefoneContato> telefone = new HashSet<TelefoneContato>();
+    @ManyToMany(mappedBy = "bombeiro")
+    @JoinTable(name = "Bombeiro_has_Patente", joinColumns = @JoinColumn(name = "bom_id"),inverseJoinColumns = @JoinColumn(name = "pat_id"))
+    private Set<Patente> patente = new HashSet<Patente>();
+    
     public Bombeiro(Usuario usuario) {
         this.usuario = usuario;
     }

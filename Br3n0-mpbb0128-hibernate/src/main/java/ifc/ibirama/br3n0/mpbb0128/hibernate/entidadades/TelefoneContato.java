@@ -9,6 +9,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 /**
@@ -27,7 +29,18 @@ public class TelefoneContato {
     private String numero;
     @Column(name = "tec_tipo", length = 5, nullable = false)
     private String tipo;
+    @ManyToOne
+    @JoinColumn(name = "bom_id", unique = false)
+    private Bombeiro bombeiro;
+    
+    public Bombeiro getBombeiro() {
+        return bombeiro;
+    }
 
+    public void setBombeiro(Bombeiro bombeiro) {
+        this.bombeiro = bombeiro;
+    }
+    
     public TelefoneContato() {
     }
 
@@ -75,4 +88,6 @@ public class TelefoneContato {
     public int hashCode() {
         return getClass().hashCode();
     }
+
+
 }
