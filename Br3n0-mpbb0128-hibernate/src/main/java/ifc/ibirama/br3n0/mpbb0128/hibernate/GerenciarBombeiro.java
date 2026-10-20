@@ -27,7 +27,18 @@ public class GerenciarBombeiro {
         bombeiro01.setDataNascimeto(LocalDate.of(2000,Month.MARCH, 14));             
         
         Transaction transacao = null;
-               
+        try {
+            transacao = session.beginTransaction();
+            
+            session.persist(bombeiro01);
+            transacao.commit();
+            
+        } catch (Exception e) {
+            if (transacao != null) {
+                transacao.rollback();
+            }
+        }
+ 
         System.out.println("Conexão estabelecida com  muiticissisimo sucesso");
         HibernateUtil.shutdown();
         session.close();

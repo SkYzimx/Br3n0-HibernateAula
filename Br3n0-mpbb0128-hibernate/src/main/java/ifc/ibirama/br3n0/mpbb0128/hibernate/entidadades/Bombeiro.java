@@ -47,8 +47,7 @@ public class Bombeiro {
 //    @JoinTable(name = "Bombeiro_has_Patente", joinColumns = @JoinColumn(name = "bom_id"),inverseJoinColumns = @JoinColumn(name = "pat_id"))
 //    private Set<Patente> patente = new HashSet<Patente>();
     
-    public Bombeiro(Usuario usuario) {
-        this.usuario = usuario;
+    public Bombeiro() {
     }
 
     public Integer getId() {
