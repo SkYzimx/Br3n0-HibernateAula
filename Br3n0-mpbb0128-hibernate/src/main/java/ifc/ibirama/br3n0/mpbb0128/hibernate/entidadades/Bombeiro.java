@@ -86,6 +86,8 @@ public class Bombeiro {
         return nomeGuerra;
     }
 
+    
+    
     public void setNomeGuerra(String nomeGuerra) {
         this.nomeGuerra = nomeGuerra;
     }

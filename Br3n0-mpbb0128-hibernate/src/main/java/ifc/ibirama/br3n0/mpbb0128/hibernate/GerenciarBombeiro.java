@@ -23,7 +23,7 @@ public class GerenciarBombeiro {
         
         bombeiro01.setCpf("12345678900");
         bombeiro01.setNome("Fulano da Silva");
-        bombeiro01.setNomeGuerra("Silva");
+        bombeiro01.setNomeGuerra("Mentira");
         bombeiro01.setDataNascimeto(LocalDate.of(2000,Month.MARCH, 14));             
         
         Transaction transacao = null;
